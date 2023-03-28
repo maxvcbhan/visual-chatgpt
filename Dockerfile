@@ -18,7 +18,7 @@ COPY . .
 
 RUN pip install -r ./requirements.txt
 # Expose the port the app will run on
-EXPOSE 8080
+EXPOSE 1015
 
 # Run the application
 CMD ["python", "visual_chatgpt.py --load ImageCaptioning_cpu,Text2Image_cpu"]
