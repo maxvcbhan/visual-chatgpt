@@ -17,6 +17,7 @@ WORKDIR /app
 COPY . .
 RUN python -m pip install --upgrade pip
 # create a new environment
+RUN conda init
 RUN conda create -n visgpt python=3.8
 
 # activate the new environment
