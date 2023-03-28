@@ -21,4 +21,4 @@ RUN pip install -r ./requirements.txt
 EXPOSE 8080
 
 # Run the application
-CMD ["python", "app.py"]
+CMD ["python", "visual_chatgpt.py --load ImageCaptioning_cpu,Text2Image_cpu"]
