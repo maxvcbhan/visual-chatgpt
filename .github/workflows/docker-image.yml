@@ -26,7 +26,7 @@ jobs:
       env:
         IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
       run: |
-        ibmcloud login --apikey $IBM_CLOUD_API_KEY
+        ibmcloud login --apikey $IBM_CLOUD_API_KEY -r jp-tok
         ibmcloud cr region-set global
         ibmcloud cr login
 
