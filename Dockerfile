@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy the environment.yml file into the container
 # COPY environment.yml .
 
-RUN pip install -r requirements.txt
+RUN pip install -r ./requirements.txt
 # # Create the Conda environment based on the environment.yml file
 # RUN conda env create -f environment.yml
 
