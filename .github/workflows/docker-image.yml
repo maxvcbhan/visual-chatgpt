@@ -34,8 +34,8 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t us.icr.io/client-engineering/visual-gpt:latest .
+        docker build -t icr.io/client-engineering/visual-gpt:latest .
 
     - name: Push Docker image to IBM Container Registry
       run: |
-        docker push us.icr.io/client-engineering/visual-gpt:latest
+        docker push icr.io/client-engineering/visual-gpt:latest
