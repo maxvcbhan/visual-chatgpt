@@ -15,6 +15,7 @@ WORKDIR /app
 
 # Copy the application source code into the container
 COPY . .
+RUN python -m pip install --upgrade pip
 # create a new environment
 RUN conda create -n visgpt python=3.8
 
