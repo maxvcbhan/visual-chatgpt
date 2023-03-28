@@ -17,9 +17,9 @@ WORKDIR /app
 COPY . .
 RUN python -m pip install --upgrade pip
 # create a new environment
-RUN conda init
+RUN conda init bash
 RUN conda create -n visgpt python=3.8
-
+RUN conda init bash
 # activate the new environment
 RUN conda activate visgpt
 RUN export OPENAI_API_KEY=${{secrets.OPENAI_API_KEY }}
