@@ -15,8 +15,14 @@ WORKDIR /app
 
 # Copy the application source code into the container
 COPY . .
+# create a new environment
+RUN conda create -n visgpt python=3.8
 
-RUN pip install -r ./requirements.txt
+# activate the new environment
+RUN conda activate visgpt
+RUN export OPENAI_API_KEY=${{secrets.OPENAI_API_KEY }}
+#  prepare the basic environments
+RUN pip install -r requirements.txt
 # Expose the port the app will run on
 EXPOSE 1015
 
