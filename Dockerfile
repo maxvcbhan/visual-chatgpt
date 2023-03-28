@@ -7,7 +7,6 @@ WORKDIR /app
 # Copy the environment.yml file into the container
 # COPY environment.yml .
 
-RUN pip install -r ./requirements.txt
 # # Create the Conda environment based on the environment.yml file
 # RUN conda env create -f environment.yml
 
@@ -17,6 +16,7 @@ RUN pip install -r ./requirements.txt
 # Copy the application source code into the container
 COPY . .
 
+RUN pip install -r ./requirements.txt
 # Expose the port the app will run on
 EXPOSE 8080
 
