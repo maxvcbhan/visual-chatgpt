@@ -1,5 +1,5 @@
 # Use the official miniconda3 base image
-FROM continuumio/conda3
+FROM continuumio/anaconda3
 
 # Set the working directory
 WORKDIR /app
